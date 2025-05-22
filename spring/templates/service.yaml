@@ -1,12 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "takeit-backend.fullname" . }}
+  name: spring
   labels:
-    app: {{ include "takeit-backend.name" . }}
-    chart: {{ include "takeit-backend.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    app: spring
 spec:
   type: ClusterIP
   ports:
@@ -15,5 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ include "takeit-backend.name" . }}
-    release: {{ .Release.Name }}
+    app: spring

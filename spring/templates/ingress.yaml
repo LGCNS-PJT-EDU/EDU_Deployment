@@ -16,10 +16,31 @@ spec:
     - host: api.takeit.academy
       http:
         paths:
+          - path: /api/*
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: spring-service
+                port:
+                  number: 80
+          - path: /swagger-ui/*
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: spring-service
+                port:
+                  number: 80
+          - path: /v3/api-docs
+            pathType: Prefix
+            backend:
+              service:
+                name: spring-service
+                port:
+                  number: 80
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: spring
+                name: spring-service
                 port:
                   number: 80

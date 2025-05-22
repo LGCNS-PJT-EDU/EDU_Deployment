@@ -1,0 +1,48 @@
+# values.yaml
+namespace: spring
+
+image:
+  repository: 754874159206.dkr.ecr.ap-northeast-2.amazonaws.com/takeit/fastapi
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  name: spring-service
+  type: ClusterIP
+  port: 80
+  targetPort: 9800
+
+ingress:
+  enabled: true
+  name: spring-ingress
+  className: alb
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/group.name: takeit-alb-group
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:754874159206:certificate/f41cc5fb-6322-4af7-9da9-d139ebe09fc2
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}, {"HTTP": 80}]'
+  hosts:
+    - host: api.takeit.academy
+      paths:
+        - path: /api/*
+          pathType: ImplementationSpecific
+        - path: /swagger-ui/*
+          pathType: ImplementationSpecific
+        - path: /v3/api-docs
+          pathType: Prefix
+        - path: /
+          pathType: Prefix
+  servicePort: 80
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
+
+# secretRef는 values-secret.yaml에서 override 가능
+secret:
+  name: spring-secrets

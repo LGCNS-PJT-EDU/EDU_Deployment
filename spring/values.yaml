@@ -7,33 +7,28 @@ image:
   repository: 754874159206.dkr.ecr.ap-northeast-2.amazonaws.com/takeit/spring
   tag: latest
 
-env:
-  KAKAO_CLIENT_ID: ""
-  KAKAO_CLIENT_SECRET: ""
-  KAKAO_REDIRECT_URI: ""
-
-  GOOGLE_CLIENT_ID: ""
-  GOOGLE_CLIENT_SECRET: ""
-  GOOGLE_REDIRECT_URI: ""
-
-  NAVER_REQUEST_TOKEN_URI: ""
-  NAVER_CLIENT_ID: ""
-  NAVER_SECRET: ""
-  NAVER_REDIRECT_URI: ""
-  NAVER_USER_INFO_URI: ""
-
-  SPRING_REDIS_HOST: ""
-  SPRING_REDIS_PORT: ""
-
-  MYSQL_ENDPOINT: ""
-  MYSQL_USERNAME: ""
-  MYSQL_PASSWORD: ""
-  MYSQL_PORT: ""
-  MYSQL_NAME: ""
-
-  FAST_API_URL: ""
-  CLIENT_BASE_URL: ""
+secretKeys:
+  - KAKAO_CLIENT_ID
+  - KAKAO_CLIENT_SECRET
+  - KAKAO_REDIRECT_URI
+  - GOOGLE_CLIENT_ID
+  - GOOGLE_CLIENT_SE CRET
+  - GOOGLE_REDIRECT_URI
+  - NAVER_REQUEST_TOKEN_URI
+  - NAVER_CLIENT_ID
+  - NAVER_SECRET
+  - NAVER_REDIRECT_URI
+  - NAVER_USER_INFO_URI
+  - SPRING_REDIS_HOST
+  - SPRING_REDIS_PORT
+  - MYSQL_ENDPOINT
+  - MYSQL_USERNAME
+  - MYSQL_PASSWORD
+  - MYSQL_PORT
+  - MYSQL_NAME
+  - FAST_API_URL
+  - CLIENT_BASE_URL
 
 ingress:
-  certificateArn: "arn:aws:acm:ap-northeast-2:754874159206:certificate/f41cc5fb-6322-4af7-9da9-d139ebe09fc2"  # 실제 인증서 ARN으로 교체
+  certificateArn: "arn:aws:acm:ap-northeast-2:754874159206:certificate/f41cc5fb-6322-4af7-9da9-d139ebe09fc2"
 

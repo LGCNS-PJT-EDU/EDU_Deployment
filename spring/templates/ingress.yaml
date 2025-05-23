@@ -20,27 +20,27 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: spring-service
+                name: spring
                 port:
                   number: 80
           - path: /swagger-ui/*
             pathType: ImplementationSpecific
             backend:
               service:
-                name: spring-service
+                name: spring
                 port:
                   number: 80
           - path: /v3/api-docs
             pathType: Prefix
             backend:
               service:
-                name: spring-service
+                name: spring
                 port:
                   number: 80
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: spring-service
+                name: spring
                 port:
                   number: 80

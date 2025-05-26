@@ -28,6 +28,7 @@ env:
   MYSQL_NAME : ""
   FAST_API_URL : ""
   CLIENT_BASE_URL : ""
+  KAFKA_BROKERS : ""
 
 ingress:
   certificateArn: "arn:aws:acm:ap-northeast-2:754874159206:certificate/f41cc5fb-6322-4af7-9da9-d139ebe09fc2"

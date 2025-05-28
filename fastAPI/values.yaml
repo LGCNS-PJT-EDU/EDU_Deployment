@@ -9,6 +9,7 @@ image:
 
 env:
   OPENAI_API_KEY : ""
+  MONGO_DB_URL : ""
 
 ingress:
   certificateArn: "arn:aws:acm:ap-northeast-2:754874159206:certificate/f41cc5fb-6322-4af7-9da9-d139ebe09fc2"

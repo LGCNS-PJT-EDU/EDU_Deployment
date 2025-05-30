@@ -29,6 +29,8 @@ env:
   FAST_API_URL : ""
   CLIENT_BASE_URL : ""
   KAFKA_BROKERS : ""
+  WEBHOOK_URL : ""
+
 
 ingress:
   certificateArn: "arn:aws:acm:ap-northeast-2:754874159206:certificate/f41cc5fb-6322-4af7-9da9-d139ebe09fc2"

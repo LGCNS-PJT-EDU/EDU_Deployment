@@ -30,6 +30,7 @@ env:
   CLIENT_BASE_URL : ""
   KAFKA_BROKERS : ""
   WEBHOOK_URL : ""
+  OPEN_AI_KEY : ""
 
 
 ingress:

@@ -13,10 +13,10 @@ metadata:
     alb.ingress.kubernetes.io/group.name: takeit-alb-group
 spec:
   rules:
-    - host: takeit.academy
+    - host: promethus.takeit.academy
       http:
         paths:
-          - path: /prometheus
+          - path: /
             pathType: Prefix
             backend:
               service:

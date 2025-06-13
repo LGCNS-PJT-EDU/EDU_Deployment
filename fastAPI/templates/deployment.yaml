@@ -11,6 +11,8 @@ spec:
       app: fastapi
   template:
     metadata:
+      annotations:
+        admission.datadoghq.com/enabled: "true"
       labels:
         app: fastapi
     spec:

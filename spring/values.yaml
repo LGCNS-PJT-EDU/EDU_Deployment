@@ -5,7 +5,7 @@ app:
 
 image:
   repository: 754874159206.dkr.ecr.ap-northeast-2.amazonaws.com/takeit/spring
-  tag: "f8652b5f08718be451f61e262fc2787365dec602"
+  tag: "ad2ed46c883d1f6b4e9568652dd62d0287d73f84"
 
 env:
   KAKAO_CLIENT_ID : ""

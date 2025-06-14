@@ -28,3 +28,5 @@ spec:
             - name: {{ $key }}
               value: "{{ $value }}"
 {{- end }}
+            - name: JAVA_TOOL_OPTIONS
+              value: "-javaagent:/opt/datadog/apm/library/java/dd-java-agent.jar"

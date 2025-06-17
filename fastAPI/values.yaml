@@ -5,7 +5,7 @@ app:
 
 image:
   repository: 754874159206.dkr.ecr.ap-northeast-2.amazonaws.com/takeit/fastapi
-  tag: "c3c92893f0234e84968712fa0104065b41455c81"
+  tag: "aa9939b33f25569c390784b5b6847d121885e67b"
 
 env:
   OPENAI_API_KEY : ""
